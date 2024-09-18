@@ -5,5 +5,13 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- bean definitions here -->
-    <bean class="org.example.Example" id="example"></bean>
+    <bean class="org.example.Example" id="example" autowire="byName">
+        <!--
+        <property name="e2" ref="example2" />
+        <property name="x" value="10" />
+        -->
+    </bean>
+    <bean class="org.example.Example2" id="example2"></bean>
+    <bean class="org.example.Doggy" id="doggy"></bean>
+    <bean class="org.example.Cata" id="cata"></bean>
 </beans>
